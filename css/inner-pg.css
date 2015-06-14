@@ -1,0 +1,139 @@
+.login-pg{
+	min-height:820px;
+	width:100%;
+	background:url(../img/signup-bg.png);}
+.login-pg h2{
+	margin:0;
+	padding:0 ;
+	color:#fff;
+	font-family:Ubuntu-R;
+	font-size:40px;
+	text-align:center;
+	 }
+.login-pg{
+	padding: 136px 0 100px;
+	text-align:center;}
+	input#u-name:active, input#u-name:hover, input#u-name:focus{background:url(../img/user-icon-hover.png) no-repeat  rgba(255, 255, 255 ,0.2);}
+	input#pass:active, input#pass:hover, input#pass:focus{background:url(../img/lock-img-hover.png) no-repeat  rgba(255, 255, 255 ,0.2);}
+#u-name{
+	border-bottom:none;
+	background:url(../img/user-icon.png) no-repeat  rgba(255, 255, 255 ,0.2);
+	}
+#pass{background:url(../img/lock-img.png) no-repeat  rgba(255, 255, 255 ,0.2);}
+.login-form{
+	background:transparent;
+	padding-top:35px;
+	}
+.login-form input{
+	width:89%;
+	margin:0 auto;
+	display:block;
+	height:70px;
+	color:#fff;
+	font-family:Ubuntu-R;
+	font-size:20px;
+	border:solid 1px #fff;
+	padding:15px;
+	text-indent: 40px;
+	 }
+.login-form input[type="submit"]{
+	width:25%;
+	color:#3f3f3f;
+	background:#fff;
+	left:0 !important;
+	bottom:0px !important;
+	padding:0px;
+	height:70px !important;
+	text-indent:0;
+	margin-top:30px;
+	border:solid 1px #fff;
+	text-transform:uppercase;}
+.login-form input[type="submit"]:hover{
+	background:rgba(255, 255, 255 ,0.2);
+	color:#fff;
+	}
+	
+.or-div{
+	width:65px;
+	height:65px;
+	border:solid 1px #fff;
+	-webkit-border-radius: 50%; 
+  -moz-border-radius: 50%;   
+  border-radius: 50%;
+  	margin: 40px auto;
+	}
+.or-div p{color:#fff;
+	font-family:Ubuntu-R;
+	font-size:22px;
+	padding:0;
+	margin:0;
+	line-height:60px;}
+.longin-options-div{}
+.log-fb{
+	background:rgba(255, 255, 255 ,0.2);
+	border:solid 1px #fff;
+	height:70px;
+	color:#fff;
+	font-family:Ubuntu-R;
+	font-size:20px;
+	padding:12px 16px;
+	line-height: 44px;
+	}
+.log-fb:hover{
+	color:#ccc;}
+	
+.log-fb:hover .fb-img{
+	background:url(../img/login-pg-img.png) no-repeat 0 -43px;
+	}
+.fb-img{
+	background:url(../img/login-pg-img.png) no-repeat;
+	width:45px;
+	height:45px;
+	display:inline-block;
+	float:left;
+	}
+.gp-img{
+	background:url(../img/login-pg-img.png) no-repeat -45px 0;
+	width:45px;
+	height:45px;
+	display:inline-block;
+	float:left;}
+	.log-gp:hover .gp-img{
+	background:url(../img/login-pg-img.png) no-repeat -45px -43px;
+	}
+.log-gp{
+	background:rgba(255, 255, 255 ,0.2);
+	border:solid 1px #fff;
+	border-left:none;
+	height:70px;
+	color:#fff;
+	font-family:Ubuntu-R;
+	font-size:20px;
+	padding:12px 16px;
+	line-height: 44px;
+	}
+	.log-gp:hover{
+		color:#ccc;
+	}
+.col-lg-6.lh {
+  padding-left: 0;
+}
+.col-lg-6.rf{padding-right:0px;}
+.creat-acc-txt a{
+	color:#fff;
+	font-family:Ubuntu-R;
+	font-size:20px;
+	margin:10px 0;
+
+	}
+.creat-acc-txt{
+	color:#fff;
+	font-family:Ubuntu-R;
+	font-size:20px;
+	margin:10px 0;
+
+	}
+
+.creat-acc-txt a:hover{
+	color:#ccc;}
+input:focus {outline:none;}
