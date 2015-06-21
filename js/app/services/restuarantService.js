@@ -1,35 +1,19 @@
 /**
- * Created by piyusht on 14/06/15.
+ * 
  */
 
-app.service('restuarantService', function($http){
+app.factory("restuarantService",['$http', function($http) {
+  var searchText;
 
-    this.getRestuarants = function()
-
-        /*
-            Dummy Data for now, instead you need to call the APIs using
-            $http.get()
-         */
-
-
-        return {
-            restuarants:[
-                {
-                    name:'Food Court',
-                    id:'3244'
-                },
-
-                {
-                    name:'Eatsome',
-                    id:'3144'
-                },
-
-                {
-                    name:'Shere Punjab',
-                    id:'3254'
-                }
-            ]
-        }
-    }
-
-})
+  return {
+    allLocations: function() {
+      return  $http.get("http://private-5dbfc-purenonveg.apiary-mock.com/search?type=kk&keyword=banr&long=10&lat=22&pin=411014");
+    },
+    getSearchText: function () {
+        return searchText;
+    },
+    setSearchText: function(value) {
+        searchText = value;
+    },
+  };
+}]);

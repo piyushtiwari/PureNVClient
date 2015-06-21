@@ -1,11 +1,12 @@
 //var app = angular.module( "nonVegApp", ['ngAutocomplete', 'ngCsv', 'ngCsvImport']);
 
-
+window.restaurants;
 var app = angular.module('nonVegApp', [
         'ngResource',
         'ngRoute',
         'ngSanitize',
-        'ngTouch'
+        'ngTouch',
+        'ngAutocomplete'
     ])
     .config(function ($routeProvider) {
         $routeProvider
@@ -20,6 +21,10 @@ var app = angular.module('nonVegApp', [
             .when('/about', {
                 templateUrl: 'views/about.html',
                 controller: 'AboutCtrl'
+            })
+            .when('/restaurants', {
+                templateUrl: 'views/restaurants.html',
+                controller: 'restaurantListController'
             })
             .otherwise({
                 redirectTo: '/'
