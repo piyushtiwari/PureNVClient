@@ -19,3 +19,4 @@ jQuery.extend(jQuery.easing,{easeInOutSine:function(j,i,b,c,d){return -c/2*(Math
 // http://javascript-source.com
 //***********************************************
 jQuery("#wowslider-container1").wowSlider({effect:"domino",prev:"",next:"",duration:20*100,delay:20*100,width:1024,height:768,autoPlay:true,autoPlayVideo:false,playPause:true,stopOnHover:false,loop:false,bullets:1,caption:true,captionEffect:"parallax",controls:true,responsive:3,fullScreen:false,gestures:2,onBeforeStep:0,images:0});
+

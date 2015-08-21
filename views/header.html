@@ -1,5 +1,5 @@
 <header>
-    <div class="container">
+    <div class="container" id="nonVeg">
         <div class="row">
             <div class="col-lg-6 col-sm-6 col-xs-6">
                 <div class="logo-txt">
@@ -7,8 +7,7 @@
                 </div>
             </div>
             <div class="col-lg-6 col-sm-6 col-xs-6">
-
-                <nav class="menu-opener">
+                <nav class="menu-opener" onclick="menuOpener()">
                     <div class="menu-opener-inner"></div>
                 </nav>
                 <nav class="menu">
@@ -20,11 +19,17 @@
                         <a href="#" class="col-lg-3">
                             <li>Order</li>
                         </a>
-                        <a href="#" class="col-lg-3">
+                        <a href="#" class="col-lg-3" ng-hide=$root.isLoggedIn>
                             <li>Sign Up</li>
                         </a>
-                        <a href="sign-in.html" class="col-lg-3">
+                        <a ng-href="#/sign-in" class="col-lg-3" ng-hide="$root.isLoggedIn">
                             <li>Sign In</li>
+                        </a>
+                        <a href="#" class="col-lg-3" ng-show=$root.isLoggedIn>
+                            <li>Welcome, {{$root.username}}</li>
+                        </a>
+                        <a ng-href="#/home" class="col-lg-3" ng-show="$root.isLoggedIn" ng-click=logout()>
+                            <li>Sign Out</li>
                         </a>
                     </ul>
                 </nav>

@@ -6,7 +6,9 @@ var app = angular.module('nonVegApp', [
         'ngRoute',
         'ngSanitize',
         'ngTouch',
-        'ngAutocomplete'
+        'ngAutocomplete',
+        'ngCookies',
+        'ui.router'
     ])
     .config(function ($routeProvider) {
         $routeProvider
@@ -26,7 +28,35 @@ var app = angular.module('nonVegApp', [
                 templateUrl: 'views/restaurants.html',
                 controller: 'restaurantListController'
             })
+            .when('/sign-in', {
+                templateUrl: 'views/sign-in.html',
+                controller: 'loginController'
+            })
             .otherwise({
-                redirectTo: '/'
+                redirectTo: '/home'
             });
+    })
+.run(function ($rootScope, $cookieStore, $state) {
+	var user = $cookieStore.get('userInfo');
+	if (user) {
+		$rootScope.isLoggedIn = true;
+		$rootScope.username = user.name.split(" ")[0];
+	} else {
+		$rootScope.isLoggedIn = false;
+	}
+    // Check login session
+    $rootScope.$on('$stateChangeStart', function (event, next, current) {
+        var userInfo = $cookieStore.get('userInfo');
+        if (!userInfo) {
+            // user not logged in | redirect to login
+            if (next.name !== "welcome") {
+                // not going to #welcome, we should redirect now
+                event.preventDefault();
+                $state.go('welcome');
+            }
+        } else if (next.name === "welcome") {
+            event.preventDefault();
+            $state.go('dashboard');
+        }
     });
+});

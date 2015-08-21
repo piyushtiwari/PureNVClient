@@ -7,6 +7,15 @@ app.directive('header', function(){
         restrict: 'A    ',
         replace: true,
         scope: {user:'='},
-        templateUrl: 'views/header.html'
+        isLoggedin: '=',
+        templateUrl: 'views/header.html',
+        controller: function($scope, $element, $location, $cookieStore, $rootScope){
+            $scope.logout = function() {
+                $cookieStore.remove("userInfo");
+                $rootScope.isLoggedIn = false;
+                $location.path("home");
+                $scope.$apply()
+            }
+        }
     }
 })
