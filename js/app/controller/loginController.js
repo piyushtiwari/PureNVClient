@@ -56,7 +56,7 @@ app.controller('loginController', function ($scope, $state, $cookieStore, $rootS
     $scope.gplusLogin = function () {
         var myParams = {
             // Replace client id with yours
-            'clientid': '18301237550-3vlqoed2en4lvq6uuhh88o2h1l9m70tr.apps.googleusercontent.com',
+            'clientid': '698865073305-59mretuks50d4joh8gego3ukb3qlis29.apps.googleusercontent.com',
             'cookiepolicy': 'single_host_origin',
             'callback': loginCallback,
             'approvalprompt': 'force',
