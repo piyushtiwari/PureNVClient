@@ -34,7 +34,7 @@
  
             function onLoadCallback() {
                 // Replace the API key with yours
-                gapi.client.setApiKey('jKyUX0WH8h8NypEcfK6bfpx9');
+                gapi.client.setApiKey('Iq1SSxX05JgIbFq5WNE5ctGw');
                 gapi.client.load('plus', 'v1', function () {
                 });
             }

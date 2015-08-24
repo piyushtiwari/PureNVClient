@@ -60,7 +60,7 @@ app.controller('loginController', function ($scope, $state, $cookieStore, $rootS
             'cookiepolicy': 'single_host_origin',
             'callback': loginCallback,
             'approvalprompt': 'force',
-            'scope': 'https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/plus.profile.emails.read'
+            'scope': 'https://www.googleapis.com/auth/plus.login'
         };
         gapi.auth.signIn(myParams);
  
