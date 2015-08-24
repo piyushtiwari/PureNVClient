@@ -18,7 +18,7 @@ app.controller('loginController', function ($scope, $state, $cookieStore, $rootS
                 console.log('User cancelled login or did not fully authorize.');
                 $rootScope.isLoggedIn = false;
             }
-        }, {scope: 'email,user_photos,user_videos'});
+        }, {scope: 'email,user_photos'});
  
         function getUserInfo() {
             // get basic info
