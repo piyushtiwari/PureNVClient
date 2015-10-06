@@ -1,0 +1,28 @@
+   
+    <div class="login-pg">
+    	<div class="container">
+        <div class="col-lg-3"></div>
+        	<div class="col-lg-6">
+            	<h2>Sign Up</h2>
+                <form class="signup-form" ng-submit="register()" name="form" ng-controller="signupController" novalidate>
+                	<input type="text" id="fname" placeholder="First Name" ng-model="user.firstname" required />
+                    <input type="text" id="lname" placeholder="Last Name" ng-model="user.lastname" required />
+                    <input type="email" id="new-email" placeholder="Email Id" ng-model="user.email" required name="input" />
+                    <span class="error" style="color: yellow" ng-show="form.input.$error.email">Invalid email</span>
+                    <input type="text" id="uname" placeholder="Username" ng-model="user.username" required />
+                     <input type="password" id="signup-pass" placeholder="Password" ng-model="user.password" required />
+                     <input type="password" id="signup-c-pass" placeholder="Confirm Password" ng-model="user.confirmpassword" required />
+                     
+                    <input type="submit" id="submit" value="Create My Account" ngClick="Submit"/>
+                </form>
+                
+                
+                <div class="clearfix"></div>
+                <div class="creat-acc-txt">New to Pure Non Veg? <a href="#">Create a new account</a></div>
+            </div>
+        <div class="col-lg-3"></div>   
+        </div>
+        
+    </div>
+    
+  

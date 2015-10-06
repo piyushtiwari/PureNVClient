@@ -351,7 +351,7 @@
      */
     render: function (updateLi) {
       var that = this;
-
+      debugger
       //Update the LI to match the SELECT
       if (updateLi !== false) {
         this.$element.find('option').each(function (index) {
@@ -1128,7 +1128,7 @@
 
   // SELECTPICKER PLUGIN DEFINITION
   // ==============================
-  function Plugin(option, event) {
+window.Plugin =  function Plugin(option, event) {
     // get the args of the outer function..
     var args = arguments;
     // The arguments of the function are explicitly re-defined from the argument list, because the shift causes them

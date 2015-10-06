@@ -235,11 +235,11 @@ and (min-device-width :1280px) {#wowslider-container1 a.ws_next {margin-right: 2
 @media only screen 
 and (min-device-width :1300px) 
 { #wowslider-container1 a.ws_next {margin-right: 21.4%!important;}#wowslider-container1 a.ws_prev {left: 58.4%!important;}
-#wowslider-container1 .ws-title{bottom:33% !important;}input[type="submit"] {  left: 22.7% !important;}}
+#wowslider-container1 .ws-title{bottom:33% !important;} .order-wrap input[type="submit"] {  left: 22.7% !important;}}
 @media only screen 
 and (min-device-width : 1900px) 
  { #wowslider-container1 a.ws_next { margin-right: 29.8% !important;}#wowslider-container1 a.ws_prev {left: 56% !important;}
- #wowslider-container1 .ws-title {bottom: 23% !important;}input[type="submit"] {  left: 22.7% !important;}}
+ #wowslider-container1 .ws-title {bottom: 23% !important;} .order-wrap input[type="submit"] {  left: 22.7% !important;}}
 #wowslider-container1 a.ws_next {
   background-image: url("../img/right-arrow.png");
 /*  bottom: 19%;*/

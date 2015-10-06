@@ -10,7 +10,7 @@
                 <div class="select-con">
                     <div class="sort-by-div">
                     <select class="selectpicker" id="sort-by" ng-model="restaurants.id" data-select-watcher ng-options="restaurant.name for restaurant in restaurants"></select>
-                         <!-- <select class="selectpicker" id="sort-by">
+                     <!--     <select class="selectpicker" id="sort-by">
                             <option disabled="disabled" selected="selected" style="display:none">Sort By</option>
                             <option>Sort By</option>
                             <option>Sort By2</option>
@@ -82,7 +82,7 @@
                      <div class="mar-top">
                     <div class="sort-by-div">
                     <select id="sort-by" class="selectpicker" ng-model="restaurants.id" data-select-watcher ng-options="restaurant.name for restaurant in restaurants"></select>
-                         <!-- <select class="selectpicker" id="sort-by">
+                        <!--  <select class="selectpicker" id="sort-by">
                             <option disabled="disabled" selected="selected" style="display:none">Sort By</option>
                             <option>Sort By</option>
                             <option>Sort By2</option>
@@ -177,7 +177,7 @@
                             </div>
                             </a>
                             <div class="menu-photo">
-                                <span><a href="#" class="a1" ng-click="showMenu(restaurant.restuarant_chain_id)">Menu</a></span>
+                                <span><a ng-href="#/restaurants-menu-order" class="a1" ng-click="showMenu(restaurant.restuarant_chain_id)">Menu</a></span>
                                 <span><a href="#" class="a2">{{restaurant.photos}} Photos</a></span>
                             </div>
                         </div>
@@ -301,6 +301,10 @@
             });
         </script>-->
         <script>
+        $('.selectpicker').each(function () {
+            var $selectpicker = $(this);
+            Plugin.call($selectpicker, $selectpicker.data());
+          })
 $(document).ready(function(){
     $('a[href^="#"]').on('click',function (e) {
         e.preventDefault();

@@ -32,6 +32,14 @@ var app = angular.module('nonVegApp', [
                 templateUrl: 'views/sign-in.html',
                 controller: 'loginController'
             })
+            .when('/sign-up', {
+                templateUrl: 'views/sign-up.html',
+                controller: 'signupController'
+            })
+            .when('/restaurants-menu-order', {
+                templateUrl: 'views/restaurants-menu-order.html',
+                controller: 'menuController'
+            })
             .otherwise({
                 redirectTo: '/home'
             });

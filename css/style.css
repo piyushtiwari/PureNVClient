@@ -18,10 +18,10 @@ and (max-device-width : 480px) {
 	.lazy-bones-sec p{margin-top:0px !important;}
 	.social{max-width:248px !important;}
 	.order-wrap h1{font-size:22px !important;padding: 19px 10px !important;}
-	textarea{width:81% !important; font-size:12px !important; padding:0px !important;}
+	.order-contain textarea{width:81% !important; font-size:12px !important; padding:0px !important;}
 	#wowslider-container1 .ws-title div,#wowslider-container1 .ws-title span{font-size:18px !important;}
 	#wowslider-container1 .ws-title{bottom:40% !important; left:65% !important;}
-input[type="submit"] {
+.order-wrap input[type="submit"] {
   bottom: 37px !important;
   font-size: 19px !important;
   height: 37px !important;
@@ -111,7 +111,7 @@ and (max-device-width : 640px) {
 		width:100%;
 	}
 	.order-contain{max-width: 173px !important;}
-	input[type="submit"] {bottom: 36px !important; font-size: 19px !important;height: 37px !important;margin-left: 134px !important;width: 99px !important;}
+	.order-wrap input[type="submit"] {bottom: 36px !important; font-size: 19px !important;height: 37px !important;margin-left: 134px !important;width: 99px !important;}
 	#wowslider-container1 .ws-title div, #wowslider-container1 .ws-title span { max-width: 100px !important;}	
 	.div-wid{max-width:300px !important;}
 	.menu-opener-inner{margin-top: 2.5rem !important;}
@@ -121,9 +121,10 @@ and (max-device-width : 640px) {
 
 /* Desktops and laptops ----------- */
 @media only screen 
-and (min-width : 1224px) {
-/* Styles */
-}
+and (max-width : 1309px) {
+.container{
+		width:100%;
+	}}
 header{
 	min-height:76px;
 	background:#fff;
@@ -149,7 +150,7 @@ header{
   position: relative;
   margin-top:-70px;
  /* top: -260px;*/
-  z-index: 100;
+  z-index: 1111;
 }.discover-sec p{
 	text-align:center;
 	font-size:18px;
@@ -180,7 +181,7 @@ header{
 	position: relative;
     background-color: rgba(255, 255, 255, 0.6);
 }
-input[type="submit"] {
+.order-wrap input[type="submit"] {
   background: none repeat scroll 0 0 #00bd9c;
   border: medium none;
   cursor: pointer;
@@ -600,7 +601,7 @@ a:focus{
 
 .copyright-sec a:hover span{
 	color:#00B7CE;}
-input[type="submit"]:hover{
+.order-wrap input[type="submit"]:hover{
 	color:#005663;
 }
 #wowslider-container1 a.ws_next:hover{

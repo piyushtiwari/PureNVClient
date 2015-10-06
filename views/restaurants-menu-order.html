@@ -1,0 +1,94 @@
+<div class="wrapper" ng-controller="menuController">
+    <div class="restu-menu-or-pg">
+    	<div class="container">
+        	<div class="row" ng-model="selectedRestaurant">	
+            	<div class="col-lg-12">
+                	<div class="head-txt">
+                	<h2>{{selectedRestaurant.name}}</h2>
+                    <p>{{selectedRestaurant.address}}</p>
+                    <p>Cafe: Continental, Cafe, Desserts</p>
+                    <div class="search-menu">
+                    	<input type="text" placeholder="Find Item" ng-model="searchMenu" />
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            	<div class="col-lg-3 col-sm-3">
+                	<div class="right-filter">
+                    	<div class="right-filtr-header">
+                        	<p>Menu</p>
+                        </div>
+                    	<div class="filter-menu" ng-repeat="menu in selectedMenu">
+                        	<ul class="responsive-accordion responsive-accordion-default ">
+								<li>
+									<div class="responsive-accordion-head f-menu"><a id="{{menu.menu_item_id}}" ng-click="gotoItem(menu.menu_item_id)">{{menu.menu_item_type}}</a> <i class="fa fa-chevron-down responsive-accordion-plus fa-fw"></i><i class="fa fa-chevron-up responsive-accordion-minus fa-fw"></i></div>
+									<div class="responsive-accordion-panel submenu" ng-repeat="name in menu.menu_items">
+										<a id="{{menu.menu_item_id}}" ng-click="gotoItem(menu.menu_item_id)">{{name.menu_item_name}}</a>						
+										</p>
+									</div>
+								</li>
+							</ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                	<div class="menu-details">
+                    	<div class="menu-repeat" ng-repeat="menu in selectedMenu">
+                    	<div id="{{menu.menu_item_id}}">
+                        	<div class="row" ng-repeat="name in menu.menu_items | filter:searchMenu">	
+                                  <div class="col-lg-7 col-sm-7">
+                                  <div class="menu-name">
+                                          <h2>{{name.menu_item_name}}</h2>
+                                         <!--  <span class="extra-speci">Loaded with extra cheese!</span> -->
+                                  </div>
+                                  </div>
+                                  <div class="col-lg-5 col-sm-5">
+                                      <div class="all-in-div">
+                                          <p class="price-div">220 Rs.</p>                                         
+                                          <div class="arrow-up-down">
+                                           <div class="dn-arr"> <img src="img/dwonarrow-bg.png" alt="" /></div>
+                                                  <div class="up-arr"> <img src="img/dwonarrow-bg.png" alt="" /></div>
+                                                  <input type="number" maxlength="12" class="input-text qty text" title="Qty" size="4" value="1" max="" min="1" step="1" name="" id="{{menu.menu_item_id}}" data-name-id={{name.id}}> 
+                                          </div> 
+                                          <a class="add-cart-img" ng-click="addItem(menu.menu_item_id,name.id)"><img src="img/cart.png" alt="" /></a>
+                                      </div>
+                                  </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-3">
+                	<aside class="order-dtls">
+                    	<div class="order-dtl-hding">
+                        	<p>Your Order</p>
+                        </div>
+                        <div class="order-dtls-content" ng-model="bill">
+                        	<div class="item-n" ng-repeat="item in cartItems">
+                        	<p class="order-menu-name">{{item.name}}</p>
+                            <div class="qty"><a ng-click=removeItem(item.id)><img src="img/minus.png" alt="" /> </a><p>{{item.qty}}</p> <span>X </span><p>{{item.cost}}</p><a ng-click=addMoreitem(item.id)><img src="img/plus.png" alt="" /> </a>
+                            <a ng-click=deleteItem(item.id)><img src="img/delete.png" alt="" /> </a></div>
+                            </div>
+                            <div class="total-amt">
+                            	<p>sub total: <span>{{bill.cost}}</span></p>
+								<p> delivery charge:<span>{{bill.delivery}}</span></p>
+                                <p>packaging:<span>{{bill.packaging}}</span></p>
+                                <p>discount:<span>{{bill.discount}}</span></p>
+                                
+                          </div>
+                          	<div class="order-amt">
+                            	Order Toatal: <span>{{bill.total}}</span>
+                            </div>
+                            <a class="proceed-chkout">Proceed To Chekout</a>
+                            
+                            </div>
+                            
+                        </div>
+                        
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+   
